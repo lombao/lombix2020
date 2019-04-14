@@ -1,0 +1,13 @@
+prefix=/usr/os/perl
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=
+includedir=
+
+Name: perl
+Description: perl
+Version: 5.26.0
+
+Requires:
+Libs: 
+Cflags: 

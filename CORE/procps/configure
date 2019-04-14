@@ -1,0 +1,10 @@
+
+./configure --prefix=$PREFIX  				\
+	    --disable-nls				\
+            --exec-prefix=                              \
+            --libdir=$PREFIX/lib                        \
+            --bindir=$PREFIX/bin                        \
+            --sbindir=$PREFIX/sbin                      \
+            --disable-static                         	\
+            --disable-kill
+

@@ -1,0 +1,11 @@
+
+./configure --prefix=$PREFIX 							\
+	    --sysconfdir=$PREFIX/etc/fcron					\
+            --localstatedir=/var 						\
+            --without-sendmail         						\
+            --with-boot-install=no     						\
+	    --with-piddir=/run							\
+	    --with-fifodir=/run							\
+	    --with-editor=/usr/bin/vi						\
+	    --with-shell=/usr/bin/bash						\
+            --with-systemdsystemunitdir=no

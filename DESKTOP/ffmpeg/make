@@ -1,0 +1,4 @@
+
+make
+
+gcc tools/qt-faststart.c -o tools/qt-faststart

@@ -1,0 +1,5 @@
+sed -i '/MV.*old/d' Makefile.in
+sed -i '/{OLDSUFF}/c:' support/shlib-install
+
+./configure --prefix=$PREFIX         	\
+            --disable-static 

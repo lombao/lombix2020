@@ -1,0 +1,15 @@
+########################################################################
+# Begin sshd
+#
+# Description : Control OpenSSH 
+#
+# Author      : Cesar Lombao - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+
+ENABLED=yes
+
+# End sshd

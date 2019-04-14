@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+########################################################################
+# Begin services down
+#
+# Description : This is to take all services down
+#
+# Authors     : Cesar Lombao  - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+source /usr/etc/rc.d/system-config
+
+for a in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20; do	
+	grep -l "ORDER=$a" $SYSTEM_RUN_FOLDER/*.rc | xargs -r basename -a | cut -f 1 -d '.' | xargs -r /usr/sbin/service stop 
+done
+
+# End services-down

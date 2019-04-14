@@ -1,0 +1,8 @@
+
+./configure --prefix=$PREFIX 			\
+            --sysconfdir=$PREFIX/etc/dhcpcd	\
+            --libdir=$PREFIX/lib     	\
+	    --libexecdir=$PREFIX/lib	\
+	    --sbindir=$PREFIX/sbin	\
+            --mandir=$PREFIX/share/man 	\
+            --dbdir=/var/db/dhcpcd      

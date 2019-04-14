@@ -1,0 +1,9 @@
+
+./configure --prefix=$PREFIX		\
+	--enable-fcdb=postgres			\
+	--enable-mapimg=magickwand		\
+	--enable-client=gtk3			\
+	--enable-debug=no			\
+	--disable-sdltest			\
+	--disable-sdl2test			\
+	--with-readline				

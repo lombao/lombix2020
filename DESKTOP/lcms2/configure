@@ -1,0 +1,9 @@
+
+sed -i '/AX_APPEND/s/^/#/' configure.ac || exit 
+autoreconf
+./configure --prefix=$PREFIX \
+	    --with-jpeg=$(pkg-config --variable prefix libjpeg)		\
+	    --with-tiff=$(pkg-config --variable prefix libtiff-4)	\
+            --disable-static 
+
+

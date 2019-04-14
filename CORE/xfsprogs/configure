@@ -1,0 +1,8 @@
+
+./configure --prefix=$PREFIX	\
+	--enable-gettext=no	\
+	--enable-readline=yes	\
+	--enable-libicu=no
+
+
+

@@ -1,0 +1,5 @@
+./configure --prefix=$PREFIX 					\
+	    --with-ogg=$(pkg-config --variable=prefix ogg)	\
+            --disable-thorough-tests 				\
+            --disable-static 		
+

@@ -1,0 +1,6 @@
+sed -i 's/\xd6/\xc3\x96/' gtk-3.0/xfce_style_types.h	|| exit 1
+
+
+./configure --prefix=$PREFIX 						\
+	    --enable-gtk3						\
+	    --disable-nls		

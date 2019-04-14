@@ -1,0 +1,6 @@
+./configure --prefix=$PREFIX 		\
+	    --sbindir=$PREFIX/bin	\
+	    --disable-nls		\
+	    --disable-static		\
+	    --disable-doc		\
+	    --disable-scrollkeeper	

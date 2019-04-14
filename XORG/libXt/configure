@@ -1,0 +1,3 @@
+./configure --prefix=$PREFIX 				\
+	    --disable-static				\
+            --with-appdefaultdir=$PREFIX/etc/X11/app-defaults

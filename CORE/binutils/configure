@@ -1,0 +1,19 @@
+mkdir build
+cd    build
+
+../configure                               	\
+      --enable-gold				\
+      --enable-ld=default			\
+      --disable-nls				\
+      --enable-plugins				\
+      --enable-64-bit-bfd			\
+      --prefix=$PREFIX                     	\
+      --with-system-zlib		   	\
+      --with-mpc=$(pkg-config --variable=prefix mpc)	\
+      --with-mpfr=$(pkg-config --variable=prefix mpfr)	\
+      --with-gmp=$(pkg-config --variable=prefix gmp)	\
+      --with-isl=$(pkg-config --variable=prefix isl)	\
+      --enable-shared                      	\
+      --disable-werror                     	
+
+

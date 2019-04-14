@@ -1,0 +1,5 @@
+
+./configure --prefix=$PREFIX 				\
+	--with-compress-command=/usr/bin/gzip		\
+	--with-uncompress-command=/usr/bin/gunzip
+

@@ -1,0 +1,17 @@
+prefix=%PREFIX%
+INSTALL_BIN=${prefix}/bin
+INSTALL_INC=${prefix}/include
+INSTALL_LIB=${prefix}/lib
+INSTALL_MAN=${prefix}/share/man/man1
+INSTALL_LMOD=${prefix}/share/5.3
+INSTALL_CMOD=${prefix}/lib/5.3
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Lua
+Description: An Extensible Extension Language
+Version: 5.3.5
+Requires:
+Libs: -L${libdir} -llua -lm -ldl
+Cflags: -I${includedir}

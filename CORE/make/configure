@@ -1,0 +1,4 @@
+sed -i '211,217 d; 219,229 d; 232 d' glob/glob.c || exit 1
+
+./configure --prefix=$PREFIX 		\
+	--disable-nls

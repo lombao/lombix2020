@@ -1,0 +1,7 @@
+./configure --prefix=$PREFIX 	\
+	    --disable-static	\
+	    --enable-a4		\
+	    --enable-metric	\
+	    --with-libpotrace
+
+

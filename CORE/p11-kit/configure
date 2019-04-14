@@ -1,0 +1,6 @@
+./configure --prefix=$PREFIX 			\
+	--sysconfdir=$PREFIX/etc		\
+	--with-trust-paths=$PREFIX/etc/pki/anchors
+
+
+

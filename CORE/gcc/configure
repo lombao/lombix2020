@@ -1,0 +1,24 @@
+
+
+
+sed -e '/m64=/s/lib64/lib/' -i.orig gcc/config/i386/t-linux64
+
+
+mkdir build
+cd    build
+
+
+SED=sed
+../configure --prefix=$PREFIX         					\
+	     --disable-nls						\
+	     --libexecdir=$PREFIX/lib					\
+             --enable-shared						\
+             --disable-bootstrap      					\
+             --disable-libmpx						\
+	     --with-mpfr=$(pkg-config --variable=prefix mpfr)		\
+	     --with-gmp=$(pkg-config --variable=prefix gmp)		\
+	     --with-isl=$(pkg-config --variable=prefix isl)		\
+	     --with-mpc=$(pkg-config --variable=prefix mpc)		\
+             --enable-languages=c,c++,go	 			\
+             --disable-multilib       					
+

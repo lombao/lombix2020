@@ -1,0 +1,3 @@
+mkdir -pv $PREFIX/share/fonts/inconsolata
+cp *ttf   $PREFIX/share/fonts/inconsolata
+fc-cache

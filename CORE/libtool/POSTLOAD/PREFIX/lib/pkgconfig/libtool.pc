@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: libtool
+Description: libtool
+Version: 2.4.6
+
+Requires:
+Libs: -L${libdir} -lltdl
+Cflags: -I${includedir}

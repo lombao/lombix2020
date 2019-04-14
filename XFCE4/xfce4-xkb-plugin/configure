@@ -1,0 +1,10 @@
+sed -e 's|xfce4/panel-plugins|xfce4/panel/plugins|' \
+	-i panel-plugin/{Makefile.in,xkb-plugin.desktop.in.in} || exit 1
+
+./configure --prefix=$PREFIX 						\
+	    --libexecdir=/usr/lib					\
+	    --disable-debug						\
+	    --disable-nls						\
+            --enable-gtk3						
+
+

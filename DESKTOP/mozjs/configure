@@ -1,0 +1,12 @@
+export PYTHON=/usr/bin/python
+cd js/src
+
+./configure   					\
+            --prefix=$PREFIX      		\
+            --libdir=$PREFIX/lib  		\
+            --sbindir=$PREFIX/sbin 		\
+	    --with-intl-api			\
+	    --with-system-zlib			\
+	    --with-system-nspr			\
+	    --enable-threadsafe			\
+	    --enable-readline

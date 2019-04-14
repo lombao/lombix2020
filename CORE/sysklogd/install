@@ -1,0 +1,6 @@
+
+mkdir -pv $PREFIX/share/man/man8
+mkdir -pv $PREFIX/share/man/man5
+mkdir -pv $PREFIX/sbin
+make BINDIR=$PREFIX/sbin MANDIR=$PREFIX/share/man install
+

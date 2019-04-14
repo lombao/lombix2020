@@ -1,0 +1,16 @@
+
+
+autoreconf -fi || exit 1
+
+./configure --prefix=$PREFIX    		\
+            --sysconfdir=$PREFIX/etc    	\
+	    --sbindir=$PREFIX/sbin		\
+	    --mandir=$PREFIX/share/man		\
+            --enable-auth-sasldb 		\
+	    --with-gdbm=$(pkg-config --variable=prefix gdbm)		\
+	    --with-openssl=$(pkg-config --variable=prefix openssl) 	\
+	    --with-sqlite3=$(pkg-config --variable=prefix sqlite3) 	\
+ 	    --with-devrandom=/dev/urandom				\
+            --with-dbpath=/var/lib/sasl/sasldb2 			\
+            --with-saslauthd=/run/saslauthd 
+

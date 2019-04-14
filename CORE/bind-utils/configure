@@ -1,0 +1,11 @@
+export CFLAGS="$(pkg-config --cflags libcap readline )"
+export CPPFLAGS=$CFLAGS
+./configure 								\
+	--prefix=$PREFIX						\
+	--with-openssl=$(pkg-config --variable=prefix openssl)		\
+	--with-libxml2=$(pkg-config --variable=prefix libxml-2.0)	\
+	--with-pkcs11=$(pkg-config --variable=prefix p11-kit-1)		\
+	--with-libidn2=$(pkg-config --variable=prefix libidn2)		\
+	--with-zlib=$(pkg-config --variable=prefix zlib)	
+
+

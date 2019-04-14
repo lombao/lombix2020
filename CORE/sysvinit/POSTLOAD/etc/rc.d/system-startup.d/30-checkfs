@@ -1,0 +1,57 @@
+#!/usr/bin/bash
+########################################################################
+# Begin checkfs
+#
+# Description : File System Check
+#
+# Authors     : Cesar Lombao - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+# From man fsck
+# 0    - No errors
+# 1    - File system errors corrected
+# 2    - System should be rebooted
+# 4    - File system errors left uncorrected
+# 8    - Operational error
+# 16   - Usage or syntax error
+# 32   - Fsck canceled by user request
+# 128  - Shared library error
+#
+#########################################################################
+
+
+	# If fastboot defined then we skip the fsck
+      	if [ -f /fastboot ]; then
+         	exit 0
+      	fi
+
+	# We remount root as read only
+     	mount -n -o remount,ro / >/dev/null
+
+      	if [ ${?} != 0 ]; then
+         	msg="\n\nCannot check root "
+         	msg="${msg}filesystem because it could not be mounted "
+         	msg="${msg}in read-only mode.\n\n"
+         	msg="${msg}After you press Enter, this system will be "
+         	msg="${msg}halted and powered off.\n\n"
+         	echo "${msg}"
+
+         	echo "Press Enter to continue..." 
+         	read ENTER
+         	halt -d -f -i -p         
+      	fi
+
+	# Should we choose to force fsck
+      	if [ -f /forcefsck ]; then
+         	options="-f"
+      	else
+         	options=""
+      	fi
+
+      	echo "Checking file systems..."
+      	# Note: -a option used to be -p; but this fails e.g. on fsck.minix
+       	/usr/sbin/fsck ${options} -a -A -C -T
+
+
+# End checkfs

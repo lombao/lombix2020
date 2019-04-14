@@ -1,0 +1,12 @@
+rm -fr thirdparty/curl 		|| exit 1
+rm -fr thirdparty/freeglut 	|| exit 1
+rm -fr thirdparty/freetype 	|| exit 1
+rm -fr thirdparty/harfbuzz 	|| exit 1
+rm -fr thirdparty/jpeg  	|| exit 1
+rm -fr thirdparty/lcms2  	|| exit 1
+rm -fr thirdparty/libjpeg  	|| exit 1
+rm -fr thirdparty/openjpeg  	|| exit 1
+rm -fr thirdparty/zlib  	|| exit 1
+
+
+

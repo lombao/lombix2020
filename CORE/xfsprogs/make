@@ -1,0 +1,6 @@
+make DEBUG=-DNDEBUG			\
+	        PREFIX=$PREFIX		\
+		INSTALL_USER=root	\
+		INSTALL_GROUP=root	\
+		LOCAL_CONFIGURE_OPTIONS="--enable-readline"
+

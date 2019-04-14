@@ -1,0 +1,10 @@
+./configure --prefix=$PREFIX 		 		\
+	    --with-xkb-output=/var/lib/xkb		\
+            --localstatedir=/var   			\
+            --with-os-vendor=Lombix 			\
+            --with-os-name=Lombix   			\
+            --disable-static       			\
+            --enable-glamor 				\
+            --enable-install-setuid 			\
+            --enable-suid-wrapper   			\
+            --disable-systemd-logind 			

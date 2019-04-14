@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+########################################################################
+# Begin mountfs
+#
+# Description : File System Mount Script
+#
+# Authors     : Cesar Lombao - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna 
+#
+########################################################################
+
+
+
+      mount -o remount,rw / >/dev/null
+      mkdir -p /dev/pts
+
+      # This will mount all filesystems that do not have _netdev in
+      # their option list.  _netdev denotes a network filesystem.
+
+      mount -a -O no_netdev >/dev/null
+
+# End mountfs

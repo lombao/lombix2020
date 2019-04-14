@@ -1,0 +1,16 @@
+./configure 							\
+	--prefix=$PREFIX					\
+	--disable-nls						\
+	--enable-static=no					\
+	--sysconfdir=$PREFIX/etc				\
+	--libexecdir=$PREFIX/lib				\
+ 	--with-all-insults  					\
+	--enable-zlib=$(pkg-config --variable=prefix zlib)	\
+	--enable-pie						\
+	--enable-asan						\
+	--enable-sasl						\
+	--enable-shell-sets-home				\
+	--with-nsswitch=/usr/etc/nsswitch.conf			\
+	--with-env-editor    					\
+	--with-passprompt="[sudo] password for %p: " 
+

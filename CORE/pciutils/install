@@ -1,0 +1,10 @@
+make PREFIX=$PREFIX 			\
+     SBINDIR=$PREFIX/sbin 		\
+     MANDIR=$PREFIX/share/man      	\
+     SHAREDIR=/usr/share/hwdata 	\
+     SHARED=yes     			\
+     install install-lib
+
+chmod 755 $PREFIX/lib/libpci*
+
+

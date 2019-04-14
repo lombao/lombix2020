@@ -1,0 +1,25 @@
+##
+# URL: The place where the source code has been downloaded.
+# If you remove the package the installation tool will try to 
+# download it again from this place.
+URL=http://pkgs.fedoraproject.org/repo/pkgs/keybinder3/keybinder-3.0-0.3.2.tar.gz/sha512/14171875e03ade88165f28c7267b66cf9efe34259d7a3072a786ba49dacf8f8d6d84753b1aeedec5dfb0a24028be86bceeebee2f6b1bf5ef2eb79ee45f909b11/keybinder-3.0-0.3.2.tar.gz
+
+##
+# PREFIX: Where the package is going to be installed. 
+# If you are familiar with autotools you know what prefix usually means
+PREFIX=/usr
+
+##
+# CREDITS: Files that specifically you want to be copied over from 
+# the source code into the credits area. The installer will automatically
+# try to copy a wide range of files but if you want any particular file to 
+# added , just write it here
+CREDITS="AUTHORS COPYING"
+
+
+##
+# STRIP: Afer the installation the installer will try to execute a
+# strip --strip-unneeded over all the files from the PREFIX. This eliminates
+# debug symbols and reduce the size of binaries ( execs and libs ). 
+DOSTRIP=no
+

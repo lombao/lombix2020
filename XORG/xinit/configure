@@ -1,0 +1,5 @@
+sed -e 's/$serverargs $vtarg/ s/serverargs/: #&/' -i startx.cpp
+
+./configure --prefix=$PREFIX 		\
+	--with-xinitdir=$PREFIX/etc/X11/app-defaults
+

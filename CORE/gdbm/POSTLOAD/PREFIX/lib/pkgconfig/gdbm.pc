@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: gdbm
+Description: gdbm
+Version: 1.18.1
+
+Requires:
+Libs: -L${libdir} -lgdbm
+Cflags: -I${includedir}

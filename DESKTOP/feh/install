@@ -1,0 +1,5 @@
+
+sed -i "s:doc/feh:&-2.27.1:" config.mk || exit 
+
+make curl=1 exif=1 PREFIX=$PREFIX ICON_PREFIX=/usr/share/icons install
+

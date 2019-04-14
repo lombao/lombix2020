@@ -1,0 +1,5 @@
+./configure --prefix=$PREFIX	\
+	--disable-nls		\
+	--enable-static=no	\
+	--enable-shared=yes	\
+	--enable-startup-notification

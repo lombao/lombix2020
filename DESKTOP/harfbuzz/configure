@@ -1,0 +1,6 @@
+
+./configure --prefix=$PREFIX           		\
+            --with-freetype			\
+	    --with-graphite2			\
+            --with-gobject        
+

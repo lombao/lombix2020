@@ -1,0 +1,13 @@
+prefix=/usr/os/btrfsprogs
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: btrfsprogs
+Description: btrfsprogs
+Version: 4.17.1
+
+Requires:
+Libs: -L${libdir} -lbtrfs
+Cflags: -I${includedir}

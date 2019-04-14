@@ -1,0 +1,4 @@
+./configure --prefix=$PREFIX         				\
+            --enable-thread-safe     				\
+	    --with-gmp=$(pkg-config --variable=prefix gmp)	\
+            --disable-static 

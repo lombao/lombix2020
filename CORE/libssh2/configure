@@ -1,0 +1,6 @@
+
+./configure --prefix=$PREFIX 		\
+	--with-libgcrypt-prefix=$(pkg-config --variable=prefix libgcrypt)	\
+	--with-libssl-prefix=$(pkg-config --variable=prefix openssl)		\
+	--with-libz-prefix=$(pkg-config --variable=prefix zlib)			\
+	--disable-static	

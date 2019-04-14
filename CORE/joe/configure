@@ -1,0 +1,8 @@
+
+#autoreconf -i
+./configure --prefix=$PREFIX 			\
+	    --sysconfdir=$PREFIX/etc		\
+            --mandir=$PREFIX/share/man		\
+	    --docdir=$PREFIX/share/doc		\
+	    --infodir=$PREFIX/share/info
+

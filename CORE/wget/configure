@@ -1,0 +1,11 @@
+
+./configure --prefix=$PREFIX 								\
+	    --disable-nls								\
+	    --enable-threads								\
+	    --enable-threads=pth							\
+	    --disable-debug								\
+	    --with-libunistring-prefix=$(pkg-config --variable=prefix libunistring)	\
+	    --with-libpth-prefix=$(pkg-config --variable=prefix pth)			\
+	    --with-libssl-prefix=$(pkg-config --variable=prefix openssl)		\
+	    --with-ssl=openssl								\
+	    --with-openssl			

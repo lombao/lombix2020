@@ -1,0 +1,11 @@
+mkdir -pv $PREFIX/bin
+
+make RAISE_SETFCAP=no  				\
+     prefix=$PREFIX    				\
+     LIBDIR=$PREFIX/lib 			\
+     SBINDIR=$PREFIX/sbin 			\
+     PKGCONFIGDIR=$PREFIX/share/pkgconfig 	\
+     install
+
+chmod -v 755 ${PREFIX}/lib/libcap.so
+

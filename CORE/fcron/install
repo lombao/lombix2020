@@ -1,0 +1,7 @@
+make install
+
+
+#
+ln -svf $PREFIX/bin/fcrontab $PREFIX/bin/crontab 
+
+

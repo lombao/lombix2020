@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: readline
+Description: readline
+Version: 8.0
+
+Requires:
+Libs: -L${libdir} -lreadline
+Cflags: -I${includedir}

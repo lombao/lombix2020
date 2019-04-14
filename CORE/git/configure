@@ -1,0 +1,15 @@
+
+PERL="$(pkg-config --variable=prefix perl)/bin/perl)"
+PYTHON3="$(pkg-config --variable=prefix python3)/bin/python3.7"
+
+./configure 	--prefix=$PREFIX 					\
+		--with-gitconfig=$PREFIX/etc/gitconfig			\
+		--with-perl=$PERL					\
+		--with-curl						\
+		--with-openssl						\
+	        --with-libpcre2						\
+		--with-expat						\
+                --with-pager=/usr/bin/less				\
+		--with-editor=/usr/bin/joe				\
+		--with-shell=/usr/bin/bash
+

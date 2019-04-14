@@ -1,0 +1,6 @@
+make install
+
+
+install -v -m644 etc/codecs.conf $PREFIX/etc/mplayer
+install -v -m644 etc/*.conf $PREFIX/etc/mplayer
+

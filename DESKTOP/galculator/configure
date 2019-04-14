@@ -1,0 +1,6 @@
+./configure --prefix=$PREFIX 		\
+	    --disable-nls		\
+            --mandir=$PREFIX/share/man 	\
+	    --docdir=$PREFIX/share/doc	\
+	    --enable-gtk3	
+	

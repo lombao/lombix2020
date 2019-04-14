@@ -1,0 +1,9 @@
+
+make -C lib/dns || exit 1
+make -C lib/isc || exit 1
+make -C lib/bind9	|| exit 1
+make -C lib/isccfg	|| exit 1
+make -C lib/irs		|| exit 1
+make -C bin/dig		|| exit 1
+
+

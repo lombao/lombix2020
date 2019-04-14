@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+########################################################################
+# Begin fcron
+#
+# Description : OpenSSH daemon
+#
+# Author      : Cesar Lombao - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+ORDER=5
+
+DAEMON_EXEC=/usr/sbin/sshd
+DAEMON_PID_FILE=/run/sshd.pid
+DAEMON_SYSCONFIG_FILE=/usr/etc/rc.d/services-config.d/sshd
+
+# End
+

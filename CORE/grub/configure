@@ -1,0 +1,9 @@
+./configure --prefix=$PREFIX 		\
+	    --disable-nls		\
+            --libdir=$PREFIX/lib     	\
+            --bindir=$PREFIX/bin     	\
+            --sbindir=$PREFIX/sbin	\
+	    --with-bootdir=/usr/boot    \
+            --sysconfdir=$PREFIX/etc 	\
+            --disable-efiemu        	\
+	    --disable-werror    

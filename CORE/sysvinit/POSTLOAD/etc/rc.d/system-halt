@@ -1,0 +1,32 @@
+#!/usr/bin/bash
+########################################################################
+# Begin halt
+#
+# Description : Script to halt the system
+#
+# Authors     : Cesar Lombao  - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+source /usr/etc/rc.d/system-config
+
+	echo "Bringing down all the services.."
+	/usr/etc/rc.d/services-down
+
+	echo "Bringing down the system.."
+	# We bring down the system
+	for i in $( ls -v $SYSTEM_SHUTDOWN_FOLDER 2> /dev/null)
+	do
+          "$SYSTEM_SHUTDOWN_FOLDER"/"${i}" 
+	done
+
+	# And stop
+	echo "Halting the system.."
+	sleep 1
+	halt -d -f -i -p
+	
+
+
+# End halt

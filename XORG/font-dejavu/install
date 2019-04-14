@@ -1,0 +1,4 @@
+mkdir -pv $PREFIX/share/fonts/dejavu
+cp -Rp dejavu-fonts-ttf-2.37/ttf/*  $PREFIX/share/fonts/dejavu
+cp dejavu-fonts-ttf-2.37/fontconfig/* $PREFIX/etc/fonts/conf.d/
+

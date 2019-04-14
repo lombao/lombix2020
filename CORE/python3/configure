@@ -1,0 +1,8 @@
+
+./configure --prefix=$PREFIX    					\
+            --enable-shared     					\
+            --with-system-expat 					\
+            --with-system-ffi   					\
+ 	    --with-openssl=$(pkg-config --variable=prefix openssl)	\
+            --with-ensurepip=yes
+

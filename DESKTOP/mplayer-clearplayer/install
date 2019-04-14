@@ -1,0 +1,3 @@
+mkdir -pv $PREFIX/share/mplayer/skins/clearplayer
+cp -Rp * $PREFIX/share/mplayer/skins/clearplayer
+ln -svf clearplayer $PREFIX/share/mplayer/skins/default

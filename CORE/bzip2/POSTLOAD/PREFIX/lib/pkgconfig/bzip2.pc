@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: bzip2
+Description: bzip compression
+Version: 1.0.6
+
+Requires:
+Libs: -L${libdir} -lbz2
+Cflags: -I${includedir}

@@ -1,0 +1,10 @@
+
+sed -i -e '/libebt_/s/^/#/' \
+	-e '/libarpt_/s/^/#/' extensions/GNUmakefile.in
+
+
+./configure --prefix=$PREFIX 		\
+	    --sbindir=$PREFIX/sbin	\
+            --disable-nftables    	\
+            --enable-libipq       	\
+            --with-xtlibdir=$PREFIX/lib/xtables 

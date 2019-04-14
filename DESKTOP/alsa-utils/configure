@@ -1,0 +1,9 @@
+./configure --prefix=$PREFIX 						\
+	    --localstatedir=/var					\
+	    --disable-nls						\
+            --disable-alsaconf   					\
+            --disable-bat        					\
+	    --with-alsa-prefix=$(pkg-config --variable=prefix alsa)	\
+	    --with-alsa-inc-prefix=$(pkg-config --variable=includedir alsa) 	\
+            --disable-xmlto      					\
+            --with-curses=ncursesw

@@ -1,0 +1,5 @@
+unset PREFIX
+make distro-pack-install
+
+update-desktop-database
+

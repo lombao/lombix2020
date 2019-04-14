@@ -1,0 +1,11 @@
+
+
+sed -i 's/IO_ftrylockfile/IO_EOF_SEEN/' gl/lib/*.c		|| exit 1
+sed -i '/unistd/a #include <sys/sysmacros.h>' gl/lib/mountlist.c || exit 1
+echo "#define _IO_IN_BACKUP 0x100" >> gl/lib/stdio-impl.h
+
+./configure --prefix=$PREFIX  			\
+	    --disable-nls			\
+	    --localstatedir=/var/lib/locate	\
+            --without-selinux 
+

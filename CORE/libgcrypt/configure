@@ -1,0 +1,6 @@
+./configure --prefix=$PREFIX 	\
+	--with-capabilities							\
+	--with-libgpg-error-prefix=$(pkg-config --variable=prefix libgpg-error)	\
+	--with-pth-prefix=$(pkg-config --variable=prefix pth) 
+
+

@@ -1,0 +1,4 @@
+export C_INCLUDE_PATH=$(pkg-config --variable=includedir zlib)
+
+make
+

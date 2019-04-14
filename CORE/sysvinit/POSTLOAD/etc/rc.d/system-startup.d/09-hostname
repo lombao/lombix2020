@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+########################################################################
+# Begin hostname
+#
+# Description : hostname config
+#
+# Authors     : Cesar Lombao  - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+source /usr/etc/rc.d/system-config
+
+
+	if [ -r $HOSTNAME_CFG_FILE ]; then
+		export HOSTNAME=$(cat $HOSTNAME_CFG_FILE) 
+		hostname "${HOSTNAME}"
+	fi
+
+# End hostname

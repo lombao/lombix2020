@@ -1,0 +1,4 @@
+#unset strip otherwise this makefile goes bananas 
+unset STRIP 
+
+make	exec_prefix=$PREFIX mandir=$PREFIX/share/man  

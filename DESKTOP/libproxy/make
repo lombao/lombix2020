@@ -1,0 +1,3 @@
+cd libproxy-0.4.15
+cd build
+make

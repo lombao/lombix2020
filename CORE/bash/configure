@@ -1,0 +1,5 @@
+./configure --prefix=$PREFIX      	\
+            --sysconfdir=$PREFIX/etc   	\
+            --without-bash-malloc 	\
+	    --disable-nls		\
+            --with-installed-readline

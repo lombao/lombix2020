@@ -1,0 +1,10 @@
+sed -i '/DEFAULT_PGSOCKET_DIR/s@/tmp@/run/postgresql@' src/include/pg_config_manual.h || exit 1
+
+./configure --prefix=$PREFIX       	\
+	    --with-perl			\
+	    --with-python		\
+	    --with-openssl		\
+	    --with-libxml		\
+	    --with-uuid=e2fs		\
+            --enable-thread-safety 	
+

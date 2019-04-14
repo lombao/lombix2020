@@ -1,0 +1,8 @@
+make install || exit 1
+
+
+# Compat
+ln -sfv $PREFIX/bin/bash $PREFIX/bin/sh 
+
+
+

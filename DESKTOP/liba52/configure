@@ -1,0 +1,6 @@
+./configure --prefix=$PREFIX 			\
+            --mandir=$PREFIX/share/man 		\
+            --disable-static 			\
+            --enable-shared 			\
+            CFLAGS="-g -O2 -fPIC"
+ 

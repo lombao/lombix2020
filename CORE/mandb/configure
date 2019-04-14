@@ -1,0 +1,11 @@
+
+./configure --prefix=$PREFIX                     	\
+	    --disable-nls				\
+            --sysconfdir=$PREFIX/etc             	\
+	    --sbindir=$PREFIX/sbin		 	\
+	    --enable-cache-owner=bin			\
+	    --with-browser=/usr/bin/lynx		\
+	    --with-db=gdbm			 	\
+            --libdir=$PREFIX/lib                 	\
+            --disable-setuid                     	
+

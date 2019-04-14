@@ -1,0 +1,7 @@
+rm -fr $PREFIX/share/gettext
+
+make install
+
+chmod -v 0755 $PREFIX/lib/preloadable_libintl.so
+
+

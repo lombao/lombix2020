@@ -1,0 +1,2 @@
+./configure --prefix=$PREFIX 					\
+            --with-appdefaultdir=$PREFIX/etc/X11/app-defaults

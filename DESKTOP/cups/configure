@@ -1,0 +1,18 @@
+sed -i 's#@CUPS_HTMLVIEW@#firefox#' desktop/cups.desktop.in || exit 1
+sed -i 's:444:644:' Makedefs.in || exit 1
+sed -i '/MAN.EXT/s:.gz::g' configure config-scripts/cups-manpages.m4 || exit 1
+
+aclocal  -I config-scripts || exit 1
+autoconf -I config-scripts || exit 1
+
+CC=gcc 						\
+./configure --prefix=$PREFIX			\
+            --libdir=$PREFIX/lib        	\
+            --localstatedir=/var		\
+            --mandir=$PREFIX/share/man		\
+            --docdir=$PREFIX/share/doc		\
+            --sysconfdir=$PREFIX/etc		\
+            --disable-systemd           	\
+	    --enable-acl			\
+            --with-rcdir=/tmp/cupsinit  	\
+            --with-system-groups=lpadmin 

@@ -1,0 +1,5 @@
+
+python2 setup.py install --prefix=$PREFIX  		\
+                        --standard-lib 			\
+			--install-data=$PREFIX/share	\
+                        --optimize=1   			

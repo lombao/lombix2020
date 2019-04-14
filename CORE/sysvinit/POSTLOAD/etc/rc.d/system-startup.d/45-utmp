@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+########################################################################
+# Begin utmp
+#
+# Description : Seed /dev/urandom
+#
+# Author      : Cesar Lombao - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2012 - Bologna
+#
+########################################################################
+
+      
+
+	cat /dev/null 	> /run/utmp      
+      	chmod 664 	/run/utmp
+      	chgrp utmp	/run/utmp 
+      
+	      
+
+# End utmp

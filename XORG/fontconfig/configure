@@ -1,0 +1,10 @@
+rm -f src/fcobjshash.h 
+
+./configure --prefix=$PREFIX           			\
+            --localstatedir=/var       			\
+            --with-default-fonts=$PREFIX/share/fonts	\
+            --disable-static           			\
+	    --with-expat=$(pkg-config --variable=prefix expat)	\
+	    --disable-nls				\
+            --disable-docs             
+

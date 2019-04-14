@@ -1,0 +1,3 @@
+make INSTALL_HDR_PATH=$PREFIX headers_install
+find $PREFIX/include \( -name .install -o -name ..install.cmd \) -delete
+

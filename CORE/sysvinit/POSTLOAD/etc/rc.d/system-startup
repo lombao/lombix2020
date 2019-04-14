@@ -1,0 +1,24 @@
+#!/usr/bin/bash
+########################################################################
+# Begin start up
+#
+# Description : First start up script
+#             : this script will dispatch/execute the startup scripts 
+#             : the foder system-startup by name order
+#
+# Authors     : Cesar Lombao  - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+source /usr/etc/rc.d/system-config
+
+	# Start all functions in this runlevel
+	for i in $( ls -v $SYSTEM_STARTUP_FOLDER 2> /dev/null)
+	do
+          "$SYSTEM_STARTUP_FOLDER"/"${i}"
+	done
+
+
+# End start up

@@ -1,0 +1,5 @@
+./configure --prefix=$PREFIX 				\
+	    --disable-nls				\
+            --with-package-name="Gstreamer 1.14.4 LOMBIX" 
+
+

@@ -1,0 +1,7 @@
+
+./configure --prefix=$PREFIX		\
+	--disable-static		\
+	--with-opus			\
+	--with-distro=Lombix		\
+	--mandir=$PREFIX/share/man	
+

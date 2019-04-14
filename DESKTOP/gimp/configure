@@ -1,0 +1,8 @@
+
+./configure --prefix=$PREFIX 					\
+            --sysconfdir=$PREFIX/etc    			\
+	    --with-gimpdir=.config/gimp				\
+	    --disable-glibtest					\
+	    --with-lcms						\
+	    --disable-gtktest					
+      		

@@ -1,0 +1,5 @@
+cd libraries/liblmdb
+sed -i 's| liblmdb.a||' Makefile
+
+make prefix=$PREFIX install
+

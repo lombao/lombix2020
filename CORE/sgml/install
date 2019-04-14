@@ -1,0 +1,12 @@
+
+
+make docdir=$PREFIX/share/doc  install
+
+
+$PREFIX/bin/install-catalog --add $PREFIX/etc/sgml-ent.cat \
+	$PREFIX/share/sgml/sgml-iso-entities-8879.1986/catalog || exit 1
+
+$PREFIX/bin/install-catalog --add $PREFIX/etc/sgml-docbook.cat \
+	$PREFIX/etc/sgml-ent.cat
+
+

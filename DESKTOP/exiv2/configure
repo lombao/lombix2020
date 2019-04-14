@@ -1,0 +1,14 @@
+cd exiv2-0.27-RC3
+
+sed -i '/conntest/s/^/#/' samples/CMakeLists.txt
+
+mkdir build
+cd build
+
+cmake -DCMAKE_INSTALL_PREFIX=$PREFIX		\
+	-DCMAKE_BUILD_TYPE=Release		\
+	-DEXIV2_ENABLE_VIDEO=yes		\
+	-DEXIV2_ENABLE_WEBREADY=yes		\
+	-DEXIV2_ENABLE_CURL=yes			\
+	-DEXIV2_BUILD_SAMPLES=no		\
+	-G "Unix Makefiles" ..

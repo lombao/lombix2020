@@ -1,0 +1,6 @@
+./configure --prefix=$PREFIX 			\
+	    --disable-nls			\
+	    --mandir=$PREFIX/share/man		\
+	    --infodir=$PREFIX/share/info	\
+	    --docdir=$PREFIX/share/doc	
+

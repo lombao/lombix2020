@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: file
+Description: file
+Version: 5.36
+
+Requires:
+Libs: -L${libdir} -lmagic
+Cflags: -I${includedir}

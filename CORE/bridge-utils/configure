@@ -1,0 +1,4 @@
+autoconf || exit 1
+
+./configure --prefix=$PREFIX 		\
+	    --sbindir=$PREFIX/sbin	

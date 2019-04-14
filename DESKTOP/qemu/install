@@ -1,0 +1,15 @@
+cd build
+make install
+
+
+cat > /usr/lib/udev/rules.d/65-kvm.rules << "EOF"
+KERNEL=="kvm", GROUP="kvm", MODE="0660"
+EOF
+
+
+chgrp kvm 	$PREFIX/libexec/qemu-bridge-helper
+chmod 4750 	$PREFIX/libexec/qemu-bridge-helper
+
+#ln -sfv qemu-system-$(uname -m) $PREFIX/bin/qemu
+
+

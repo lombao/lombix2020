@@ -1,0 +1,5 @@
+./configure --prefix=$PREFIX 			\
+		--enable-jpeg			\
+	        --enable-jasper			\
+		--enable-lcms			\
+		--disable-static		

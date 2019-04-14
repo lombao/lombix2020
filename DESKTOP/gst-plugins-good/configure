@@ -1,0 +1,4 @@
+./configure --prefix=$PREFIX 						\
+	    --disable-nls						\
+	    --disable-examples						\
+            --with-package-name="Gstreamer Good Plugins 1.14.4 LOMBIX" 

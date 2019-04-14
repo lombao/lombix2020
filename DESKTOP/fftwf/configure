@@ -1,0 +1,5 @@
+./configure --prefix=$PREFIX 		\
+            --enable-shared  		\
+	    --enable-float		\
+	    --disable-static		\
+            --enable-threads 

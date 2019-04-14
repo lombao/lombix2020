@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: rpcsvc-proto
+Description: rpcsvc-proto
+Version: 1.4
+
+Requires:
+Libs: -L${libdir} 
+Cflags: -I${includedir}

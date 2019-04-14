@@ -1,0 +1,3 @@
+sed -i '/#define LUA_ROOT/s:/usr/local/:/usr:' src/luaconf.h ||  exit 1
+
+

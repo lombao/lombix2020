@@ -1,0 +1,7 @@
+
+./configure --prefix=$PREFIX 		\
+           --enable-music-ogg 		\
+           --enable-music-mod 		\
+         --enable-music-mp3-mad-gpl
+
+

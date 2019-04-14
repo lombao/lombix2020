@@ -1,0 +1,5 @@
+
+sh autogen.sh
+./configure --prefix=$PREFIX 		\
+            --disable-static 		
+

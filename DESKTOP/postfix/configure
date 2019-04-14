@@ -1,0 +1,21 @@
+
+mkdir -p /var/mail
+chown -v postfix:postfix /var/mail
+
+
+sed -i 's/.\x08//g' README_FILES/*
+
+make CCARGS="-DDEF_CONFIG_DIR=\\\"$PREFIX/etc/postfix\\\"				\
+	     -DDEF_COMMAND_DIR=\\\"$PREFIX/bin\\\"					\
+	     -DDEF_DAEMON_DIR=\\\"$PREFIX/bin\\\"					\
+             -DDEF_MAILQ_PATH=\\\"$PREFIX/bin/mailq\\\"					\
+	     -DDEF_NEWALIAS_PATH=\\\"$PREFIX/bin/newaliases\\\"				\
+	     -DDEF_SENDMAIL_PATH=\\\"$PREFIX/bin/sendmail\\\"				\
+	     -DNO_DB -DNO_NIS -DNO_NISPLUS 						\
+	     -DHAS_LDAP	 								\
+             -DHAS_SQLITE 								\
+             -DHAS_PGSQL								\
+	     -DUSE_TLS 							                \
+             -DUSE_SASL_AUTH -DUSE_CYRUS_SASL -I/usr/include/sasl		 " \
+     AUXLIBS="-lldap -llber -lssl -lcrypto -lsasl2 -lpq -lz -lm -lsqlite3 -lpthread"                 	\
+     makefiles 

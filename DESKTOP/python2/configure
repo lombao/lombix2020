@@ -1,0 +1,9 @@
+
+./configure --prefix=$PREFIX    	\
+            --enable-shared     	\
+            --with-system-expat 	\
+	    --with-pth			\
+            --with-system-ffi   	\
+            --with-ensurepip=yes	\
+	    --enable-unicode=ucs4
+

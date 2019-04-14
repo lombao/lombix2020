@@ -1,0 +1,10 @@
+
+./configure --prefix=$PREFIX 			\
+	    --sysconfdir=$PREFIX/etc 		\
+            --mandir=$PREFIX/share/man   	\
+	    --with-tmpdir=/run			\
+	    --with-tmpdir=directory=/run	
+
+
+
+

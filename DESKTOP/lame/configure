@@ -1,0 +1,5 @@
+
+./configure --prefix=$PREFIX 		\
+            --enable-mp3rtp  		\
+            --disable-static 	
+

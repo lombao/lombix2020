@@ -1,0 +1,6 @@
+make prefix=$PREFIX		\
+	builld=release		\
+	install
+
+
+ln -sfv mupdf-x11	$PREFIX/bin/mupdf

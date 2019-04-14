@@ -1,0 +1,11 @@
+./configure 	--prefix=$PREFIX		\
+		--sysconfdir=$PREFIX/etc	\
+		--localstatedir=/var		\
+		--disable-static		\
+		--disable-mono			\
+		--disable-monodoc		\
+		--disable-python		\
+		--disable-qt3			\
+		--disable-qt4			\
+		--with-distro=none		\
+		--with-systemdsystemunitdir=no

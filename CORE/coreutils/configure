@@ -1,0 +1,9 @@
+
+./configure    \
+            --prefix=$PREFIX            				\
+	    --disable-nls						\
+            --without-selinux           				\
+	    --with-openssl						\
+	    --with-libpth-prefix=$(pkg-config --variable=prefix pth)	\
+            --enable-no-install-program=kill,uptime
+

@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+########################################################################
+# Begin random
+#
+# Description : Seed /dev/urandom
+#
+# Author      : Cesar Lombao - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2012 - Bologna
+#
+########################################################################
+
+      
+      
+      cat /etc/shadow 	> /dev/urandom
+      date 		> /dev/urandom 
+      
+	      
+
+# End urandom

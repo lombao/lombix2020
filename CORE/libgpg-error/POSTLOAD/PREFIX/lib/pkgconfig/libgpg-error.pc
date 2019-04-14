@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: libgpg-error
+Description: libgpg-error
+Version: 1.35
+
+Requires:
+Libs: -L${libdir} -lgpg-error
+Cflags: -I${includedir}

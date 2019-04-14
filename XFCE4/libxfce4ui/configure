@@ -1,0 +1,6 @@
+./configure --prefix=$PREFIX 		\
+	    --disable-nls		\
+	    --enable-gtk3		\
+	    --with-vendor-info=Lombix		\
+	    --enable-startup-notification	\
+

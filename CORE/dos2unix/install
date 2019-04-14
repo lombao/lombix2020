@@ -1,0 +1,5 @@
+make prefix=$PREFIX install
+
+rm -fr $PREFIX/share/locale
+
+

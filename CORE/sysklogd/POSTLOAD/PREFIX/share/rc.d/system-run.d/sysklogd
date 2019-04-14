@@ -1,0 +1,118 @@
+#!/usr/bin/bash
+########################################################################
+# Begin sysklogd
+#
+# Description : Sysklogd loader
+#
+# Authors     : Cesar Lombao - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+#
+source /usr/os/sysvinit/etc/system-config
+
+#
+SYSKLOGD_ROOT=%PREFIX%
+SYSKLOGD_SYSCONFIG_FILE=$SYSKLOGD_ROOT/etc/sysconfig/sysklogd
+SYSLOGD_DAEMON=$SYSKLOGD_ROOT/sbin/syslogd
+SYSLOGD_PID_FILE=/run/syslogd.pid
+KLOGD_DAEMON=$SYSKLOGD_ROOT/sbin/klogd
+KLOGD_PID_FILE=/run/klogd.pid
+
+
+[ -r $SYSKLOGD_SYSCONFIG_FILE ] && source $SYSKLOGD_SYSCONFIG_FILE
+if [ "$ENABLED" != "yes" ]; then
+	echo "Sysklogd disabled.. exit"
+	exit 0
+fi
+
+
+
+case "${1}" in
+   start)
+      echo "Starting system log daemon..."
+      $SYSLOGD_DAEMON -m 0 -f $SYSKLOGD_ROOT/etc/syslog.conf
+
+      echo "Starting kernel log daemon..."
+      $KLOGD_DAEMON
+      ;;
+
+   stop)
+      echo "Stopping kernel log daemon..."
+      if [ -r $KLOGD_PID_FILE ]; then
+      	pidk=$(cat $KLOGD_PID_FILE)
+      	kill $pidk
+      else
+        killall klogd
+      fi
+      rm -f $KLOGD_PID_FILE
+      
+      echo "Stopping system log daemon..."
+      if [ -r $SYSLOGD_PID_FILE ]; then
+      	pids=$(cat $SYSLOGD_PID_FILE)
+      	kill $pids
+      else
+        killall syslogd
+      fi
+      rm -f $SYSLOGD_PID_FILE
+      
+      ;;
+
+   restart)
+      ${0} stop
+      sleep 1
+      ${0} start
+      ;;
+
+
+   *)
+      echo "Usage: ${0} {start|stop|restart}"
+      exit 1
+      ;;
+esac
+
+exit 0
+
+# End sysklogd
+#!/usr/bin/bash
+########################################################################
+# Begin lxdm
+#
+# Description : Start lxdm daemon
+#
+# Author      : Cesar Lombao - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+
+case "$1" in
+    start)
+        echo "Starting LXDM Server..."
+        $LXDM_DAEMON -d
+        ;;
+
+    stop)
+        echo "Stopping LXDM Server..."
+        if [ -r $LXDM_PID ]; then
+        	kill $(cat $LXDM_PID)
+		rm -f $LXDM_PID
+	fi
+        ;;
+
+    restart)
+        $0 stop
+        sleep 1
+        $0 start
+        ;;
+
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+        ;;
+esac
+
+# End lxdm bootscript

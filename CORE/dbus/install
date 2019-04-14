@@ -1,0 +1,8 @@
+
+make install
+
+chown -v root:messagebus $PREFIX/libexec/dbus*
+chmod -v 4750            $PREFIX/libexec/dbus-daemon-launch-helper
+
+$PREFIX/bin/dbus-uuidgen --ensure
+

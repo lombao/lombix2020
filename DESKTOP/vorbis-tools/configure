@@ -1,0 +1,8 @@
+export LDFLAGS="-lm"
+./configure --prefix=$PREFIX 						\
+	    --disable-nls						\
+	    --with-vorbis=$(pkg-config --variable=prefix vorbis)	\
+	    --with-curl=$(pkg-config --variable=prefix libcurl)		\
+	    --with-ogg=$(pkg-config --variable=prefix ogg)		\
+            --enable-vcut    			
+

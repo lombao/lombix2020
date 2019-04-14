@@ -1,0 +1,5 @@
+
+./configure	--prefix=$PREFIX						\
+		--disable-nls							\
+	        --with-libpth-prefix=$(pkg-config --variable=prefix pth)	\
+		--bindir=$PREFIX/bin		

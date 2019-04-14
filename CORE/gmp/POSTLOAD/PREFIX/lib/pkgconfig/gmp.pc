@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: gmp
+Description: gmp
+Version: 6.1.2
+
+Requires:
+Libs: -L${libdir} -lgmp
+Cflags: -I${includedir}

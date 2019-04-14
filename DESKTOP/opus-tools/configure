@@ -1,0 +1,4 @@
+./configure --prefix=$PREFIX 		\
+	    --with-ogg=$(pkg-config --variable=prefix ogg)	\
+	    --with-opus=$(pkg-config --variable=prefix opus)	
+

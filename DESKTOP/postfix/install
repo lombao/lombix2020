@@ -1,0 +1,15 @@
+sh postfix-install -non-interactive 			\
+   command_directory=$PREFIX/bin			\
+   config_directory=$PREFIX/etc/postfix			\
+   queue_directory=/var/spool/postfix			\
+   manpage_directory=$DATAROOTDIR/man 			\
+   html_directory=$DATAROOTDIR/doc/postfix-3.2.2/html 	\
+   readme_directory=$DATAROOTDIR/doc/postfix-3.2.2/readme
+
+rm $PREFIX/bin/mailq
+rm $PREFIX/bin/newaliases
+ln -sfv $PREFIX/bin/sendmail $PREFIX/bin/mailq
+ln -sfv $PREFIX/bin/sendmail $PREFIX/bin/newaliases
+
+mkdir -pv $PREFIX/sbin
+ln -sfv $PREFIX/bin/sendmail $PREFIX/sbin/sendmail

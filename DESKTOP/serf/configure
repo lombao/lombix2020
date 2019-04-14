@@ -1,0 +1,9 @@
+
+
+sed -i "/Append/s:RPATH=libdir,::"   SConstruct || exit 1
+sed -i "/Default/s:lib_static,::"    SConstruct || exit 1
+sed -i "/Alias/s:install_static,::"  SConstruct || exit 1
+
+sed -i "/  print/{s/print/print(/; s/$/)/}" SConstruct || exit 1
+
+scons PREFIX=$PREFIX 

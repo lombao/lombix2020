@@ -1,0 +1,4 @@
+mkdir -pv $PREFIX/bin
+install -v -m755 unrar $PREFIX/bin
+
+

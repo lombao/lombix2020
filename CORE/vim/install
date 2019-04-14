@@ -1,0 +1,6 @@
+make install
+
+ln -sfv $PREFIX/bin/vim $PREFIX/bin/vi
+
+
+

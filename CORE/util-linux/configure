@@ -1,0 +1,24 @@
+mkdir -pv /var/lib/hwclock
+
+./configure ADJTIME_PATH=/var/lib/hwclock/adjtime   		\
+            --prefix=$PREFIX      				\
+	    --disable-nls					\
+            --libdir=$PREFIX/lib  				\
+            --sbindir=$PREFIX/sbin 				\
+            --sysconfdir=$PREFIX/etc 				\
+            --docdir=$PREFIX/share/doc 				\
+            --without-python     				\
+            --disable-chfn-chsh  				\
+            --disable-plymouth_support 				\
+            --disable-login      				\
+            --disable-nologin    				\
+            --disable-su         				\
+            --disable-setpriv    				\
+            --disable-runuser    				\
+            --disable-pylibmount 				\
+            --disable-static     				\
+            --disable-pg        				\
+            --without-systemd    				\
+            --without-systemdsystemunitdir
+
+

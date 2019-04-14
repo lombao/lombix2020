@@ -1,0 +1,8 @@
+./configure --prefix=$PREFIX 		\
+	--shared-cares			\
+	--shared-libuv			\
+	--shared-openssl		\
+	--shared-zlib			\
+	--with-intl=system-icu	
+
+

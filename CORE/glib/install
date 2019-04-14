@@ -1,0 +1,8 @@
+
+
+
+
+cd build-glib
+ninja install 
+rm -fr $PREFIX/share/locale
+

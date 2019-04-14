@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: faac
+Description: faac
+Version: 1.29.9.2
+
+Requires:
+Libs: -L${libdir} 
+Cflags: -I${includedir}

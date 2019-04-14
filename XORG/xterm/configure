@@ -1,0 +1,8 @@
+
+
+  ./configure --prefix=$PREFIX 		\
+	--with-pcre2			\
+	--enable-256-color		\
+	--with-app-defaults=$PREFIX/etc/X11/app-defaults
+
+

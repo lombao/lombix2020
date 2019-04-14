@@ -1,0 +1,7 @@
+PAGE=A4 ./configure 			\
+	--prefix=$PREFIX  		\
+	--disable-nls			\
+	--with-doc=no 			\
+	--mandir=$PREFIX/share/man	
+
+

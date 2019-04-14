@@ -1,0 +1,45 @@
+
+
+
+
+#
+# Also, the SSL_CERT_FILE must be configured
+# otherwise it will fail because it is unable to
+# find the Root CA authorities ( that file *.crt )
+# This variable is configured in the standard profile for Lombix
+# However I leave a note there in case I forget
+
+
+cat <<EOF > config.toml
+# see src/bootstrap/config.toml.example for more possible options
+[llvm]
+
+ninja = true
+targets = "X86"
+experimental-targets = ""
+
+[build]
+docs = false
+extended = true
+
+[install]
+EOF
+
+echo "prefix = \"$PREFIX\"" >> config.toml
+
+cat <<EOF >> config.toml
+docdir = "share/doc/rustc-1.32.0"
+
+[rust]
+channel = "stable"
+rpath = false
+backtrace-on-ice = true
+codegen-tests = false
+
+EOF
+
+export RUSTFLAGS="$RUSTFLAGS -C link-args=-lffi" || exit 1
+
+python3 ./x.py build --exclude src/tools/miri || exit 1
+export LIBSSH2_SYS_USE_PKG_CONFIG=1
+python3 ./x.py install || exit 1

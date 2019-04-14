@@ -1,0 +1,6 @@
+./configure --prefix=$PREFIX 						\
+	    --disable-wayland						\
+	    --disable-examples						\
+	    --disable-opencv						\
+            --with-package-name="Gstreamer Bad Plugins 1.14.4 LOMBIX" 
+

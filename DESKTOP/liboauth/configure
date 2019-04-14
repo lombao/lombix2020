@@ -1,0 +1,5 @@
+
+./configure --prefix=$PREFIX 			\
+	--enable-nss				\
+	--disable-static
+

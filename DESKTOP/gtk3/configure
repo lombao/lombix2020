@@ -1,0 +1,10 @@
+
+
+./configure --prefix=$PREFIX         	\
+            --enable-debug=no         	\
+	    --disable-nls		\
+            --enable-gtk2-dependency  	\
+            --disable-gtk-doc         	\
+            --enable-broadway-backend 	\
+            --enable-x11-backend      	\
+            --disable-wayland-backend 

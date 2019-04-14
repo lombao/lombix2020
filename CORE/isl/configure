@@ -1,0 +1,5 @@
+
+./configure --prefix=$PREFIX 						\
+	    --with-gmp-prefix=$(pkg-config --variable=prefix gmp )	\
+            --disable-static 		
+

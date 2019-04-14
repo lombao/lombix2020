@@ -1,0 +1,1 @@
+cp -v $PREFIX/share/zoneinfo/UTC $PREFIX/etc/localtime

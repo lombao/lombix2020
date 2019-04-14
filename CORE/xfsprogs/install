@@ -1,0 +1,5 @@
+make PKG_DOC_DIR=$PREFIX/share/doc/xfsprogs PREFIX=$PREFIX install
+make PKG_DOC_DIR=$PREFIX/share/doc/xfsprogs PREFIX=$PREFIX install-dev
+
+#rm -rf $PREFIX/lib/libhandle.a
+#rm -fr /lib/libhandle.{a,la,so}

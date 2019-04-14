@@ -1,0 +1,10 @@
+
+
+
+./configure --prefix=$PREFIX 						\
+            --sysconfdir=$PREFIX/etc/ssh				\
+            --with-md5-passwords     					\
+            --with-pie               					\
+	    --with-zlib=$(pkg-config --variable=prefix zlib)		\
+	    --with-ssl-dir=$(pkg-config --variable=prefix openssl)	\
+            --with-privsep-path=/var/lib/sshd

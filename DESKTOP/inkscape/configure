@@ -1,0 +1,13 @@
+sed -i 's| abs(| std::fabs(|g' src/ui/tools/flood-tool.cpp
+
+./autogen.sh || exit 1
+
+
+
+mkdir build
+cd build
+
+cmake -DCMAKE_INSTALL_PREFIX=$PREFIX 	\
+	-DCMAKE_BUILD_TYPE=Release	\
+	.. || exit 1
+

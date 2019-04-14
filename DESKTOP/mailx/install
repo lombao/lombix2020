@@ -1,0 +1,8 @@
+make 	PREFIX=$PREFIX 					\
+	SYSCONFDIR=$PREFIX/etc				\
+     	UCBINSTALL=/usr/bin/install 			\
+	MANDIR=$PREFIX/share/man			\
+	install
+
+ln -svf mailx $PREFIX/bin/mail
+

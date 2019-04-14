@@ -1,0 +1,19 @@
+mkdir build
+cd build
+
+meson --prefix=$PREFIX 			\
+	--sysconfdir=$PREFIX/etc	\
+	-Dfuse=false			\
+	-Dgphoto2=false			\
+	-Dafc=false			\
+	-Dbluray=false			\
+	-Dnfs=false			\
+	-Dmtp=false			\
+	-Dtmpfilesdir=no		\
+	-Dlogind=false			\
+	-Ddnssd=false			\
+	-Dgoa=false			\
+	-Dudisks2=false			\
+	-Dgoogle=false			\
+	-Dsystemduserunitdir=no		\
+	..

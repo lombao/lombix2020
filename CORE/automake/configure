@@ -1,0 +1,9 @@
+
+
+autoreconf -i
+sed -i 's:/\\\${:/\\\$\\{:' bin/automake.in
+./configure --prefix=$PREFIX 
+
+
+
+

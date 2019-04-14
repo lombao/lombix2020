@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: faad2
+Description: faad2
+Version: 2.8.8
+
+Requires:
+Libs: -L${libdir} 
+Cflags: -I${includedir}

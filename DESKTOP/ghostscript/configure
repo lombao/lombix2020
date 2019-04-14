@@ -1,0 +1,11 @@
+rm -fr freetype lcms2 jpeg libpng
+rm -fr zlib
+
+
+export CFLAGS="$(pkg-config --cflags libjpeg libtiff-4 lcms2 freetype2)"
+export CPPFLAGS=$CFLAGS
+./configure --prefix=$PREFIX 		\
+	    --disable-compile-inits 	\
+	    --enable-dynamic		\
+	    --with-system-libtiff 
+

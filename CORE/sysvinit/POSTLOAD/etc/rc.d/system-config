@@ -1,0 +1,38 @@
+#!/usr/bin/bash
+########################################################################
+# Begin system-config
+#
+# Description : Common variables and functions for startup scripts
+#               This script should be called by all scripts that handle
+#               the start or shutdown of services and system
+#
+# Authors     : Cesar Lombao  - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+export PATH=/usr/bin:/usr/sbin
+
+export ETC_PREFIX=/usr/etc
+
+export SYSCONFIG_PREFIX=$ETC_PREFIX/sysconfig
+
+export SYSTEM_STARTUP_FOLDER=$ETC_PREFIX/rc.d/system-startup.d
+export SYSTEM_SHUTDOWN_FOLDER=$ETC_PREFIX/rc.d/system-halt.d
+export SYSTEM_RUN_FOLDER=$ETC_PREFIX/rc.d/services-up.d
+
+export MODULES_CFG_FILE=$SYSCONFIG_PREFIX/modules
+export HOSTNAME_CFG_FILE=$SYSCONFIG_PREFIX/hostname
+export CONSOLE_CFG_FILE=$SYSCONFIG_PREFIX/console
+export SYSCTL_CFG_FILE=$SYSCONFIG_PREFIX/sysctl.conf
+export CLOCK_CFG_FILE=$SYSCONFIG_PREFIX/clock
+export IFACE_CFG_FILE=$SYSCONFIG_PREFIX/iface
+
+
+
+export INITTAB_CFG_FILE=/usr/etc/inittab
+
+
+
+# End system-config

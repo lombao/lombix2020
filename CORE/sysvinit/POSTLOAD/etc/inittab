@@ -1,0 +1,44 @@
+# Begin inittab
+# Lombix 2020 - Bologna Release
+# #############################
+
+
+## This is the Default AND ONLY Run Level
+##
+id:3:initdefault:
+
+## How to handl the famous CTRL+ALT+DEL
+##
+ca:12345:ctrlaltdel:/usr/sbin/shutdown -t1 -a -r now
+
+
+## This is the first scrit executed by init
+## when the system is boot up
+si::sysinit:/usr/etc/rc.d/system-startup
+
+## Now we only use Runlevel 3 as the default normal
+l0:0:wait:/usr/etc/rc.d/system-halt
+l3:3:wait:/usr/etc/rc.d/services-up
+l6:6:wait:/usr/etc/rc.d/system-reboot
+
+
+## These are the virtual console definitions
+## Please note that the first one does not clean
+## the screen automatically
+##
+1:2345:respawn:/usr/sbin/agetty --noclear tty1 9600
+2:2345:respawn:/usr/sbin/agetty tty2 9600
+3:2345:respawn:/usr/sbin/agetty tty3 9600
+4:2345:respawn:/usr/sbin/agetty tty4 9600
+5:2345:respawn:/usr/sbin/agetty tty5 9600
+6:2345:respawn:/usr/sbin/agetty tty6 9600
+
+
+## In case the system has to boot 
+## into single user mode
+##
+su:S016:once:/usr/sbin/sulogin
+
+
+# ##############
+# End of inittab

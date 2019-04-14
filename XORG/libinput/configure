@@ -1,0 +1,9 @@
+mkdir build
+cd build
+
+meson       --prefix=$PREFIX 			\
+ 	    -Ddebug-gui=false	 		\
+            -Dtests=false   			\
+            -Ddocumentation=false 		\
+            -Dlibwacom=false
+ 			

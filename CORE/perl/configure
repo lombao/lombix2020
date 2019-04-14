@@ -1,0 +1,19 @@
+
+
+
+export BUILD_ZLIB=False
+export BUILD_BZIP2=0
+export SYSTEM=linux
+export LC_ALL=C
+
+sh Configure -des -Dprefix=$PREFIX                 	\
+                  -Dvendorprefix=$PREFIX           	\
+                  -Dcc="/usr/bin/gcc"   	    	\
+                  -Dman1dir=$PREFIX/share/man/man1 	\
+                  -Dman3dir=$PREFIX/share/man/man3 	\
+                  -Dpager="$(pkg-config --variable=prefix less)/bin/less -isR"					\
+		  -Dlocincpath="$(pkg-config --variable=includedir zlib expat libpcre gdbm openssl bzip2)"	\
+		  -Dloclibpath="$(pkg-config --variable=libdir zlib expat libpcre gdbm openssl bzip2)"		\
+                  -Dosname=linux                   	\
+                  -Dusethreads                     	\
+                  -Duseshrplib                     	

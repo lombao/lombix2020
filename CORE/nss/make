@@ -1,0 +1,14 @@
+
+cd nss 
+
+
+make -j1 PREFIX=$PREFIX							\
+  BUILD_OPT=1	                  					\
+  NSPR_INCLUDE_DIR=$(pkg-config --variable=includedir nspr)		\
+  SQLITE_INCLUDE_DIR=$(pkg-config --variable=includedir sqlite3)	\
+  USE_SYSTEM_ZLIB=1                   					\
+  NSS_ENABLE_WERROR=0							\
+  ZLIB_LIBS=-lz                       					\
+  USE_64=1                            					\
+  NSS_USE_SYSTEM_SQLITE=1
+

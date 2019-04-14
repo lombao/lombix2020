@@ -1,0 +1,8 @@
+mkdir build-glib
+cd    build-glib
+
+meson --prefix=$PREFIX		\
+	-Dman=true		\
+	-Dselinux=disabled	\
+	..
+

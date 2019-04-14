@@ -1,0 +1,8 @@
+
+
+CXXFLAGS=-std=c++98			\
+./configure --prefix=$PREFIX 		\
+            --disable-static 		\
+            --disable-docs    		\
+            --disable-examples 		
+

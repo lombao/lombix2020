@@ -1,0 +1,4 @@
+make install
+
+install -v -m755 tools/qt-faststart $PREFIX/bin || exit 1
+

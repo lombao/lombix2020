@@ -1,0 +1,5 @@
+
+./configure 	--prefix=$PREFIX					\
+	--disable-nls							\
+	--with-curses-dir=$(pkg-config --variable=prefix ncursesw)	\
+	--with-ncursesw

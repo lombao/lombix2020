@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: npth
+Description: npth
+Version: 1.6
+
+Requires:
+Libs: -L${libdir} -lnpth
+Cflags: -I${includedir}

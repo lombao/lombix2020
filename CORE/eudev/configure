@@ -1,0 +1,14 @@
+
+
+./configure --prefix=$PREFIX           		\
+	    --sysconfdir=$PREFIX/etc		\
+            --bindir=$PREFIX/bin       		\
+            --sbindir=$PREFIX/sbin		\
+            --libdir=$PREFIX/lib       		\
+            --with-rootrundir=/run     		\
+            --with-rootlibdir=$PREFIX/lib  	\
+            --enable-manpages       		\
+            --disable-static        		\
+            --disable-selinux       		\
+            --config-cache
+

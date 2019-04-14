@@ -1,0 +1,4 @@
+unset CPLUS_INCLUDE_PATH
+./configure --prefix=$PREFIX 		\
+            --enable-cxx     		\
+            --disable-static 

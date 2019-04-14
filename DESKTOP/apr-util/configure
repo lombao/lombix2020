@@ -1,0 +1,10 @@
+
+./configure --prefix=$PREFIX    					\
+            --with-apr=$PREFIX						\
+ 	    --with-gdbm=$(pkg-config --variable=prefix gdbm)		\
+	    --with-openssl=$(pkg-config --variable=prefix openssl)	\
+	    --with-pgsql=$(pkg-config --variable=prefix postgres)	\
+	    --with-sqlite3=$(pkg-config --variable=prefix sqlite3)	\
+	    --with-expat=$(pkg-config --variable=prefix expat)		\
+	    --with-crypto
+

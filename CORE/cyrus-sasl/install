@@ -1,0 +1,7 @@
+rm -f $PREFIX/lib/pkgconfig/libsasl2.pc
+
+make install 
+install -v -dm700 /var/lib/sasl
+
+
+

@@ -1,0 +1,8 @@
+make BINDIR=$PREFIX/bin  		\
+     SBINDIR=$PREFIX/sbin 		\
+     LIBDIR=$PREFIX/lib 		\
+     PREFIX=$PREFIX     		\
+     CONFDIR=$PREFIX/etc	   	\
+     install
+
+

@@ -1,0 +1,36 @@
+#!/usr/bin/bash
+########################################################################
+# Begin udev_retry
+#
+# Description : Udev cold-plugging script (retry)
+#
+# Authors     : Cesar Lombao - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+
+
+      rundir=/run/udev
+    
+      for file in ${rundir}/tmp-rules--*; do
+         dest=${file##*tmp-rules--}
+         [ "$dest" = '*' ] && break
+         cat $file >> /usr/etc/udev/rules.d/$dest
+         rm -f $file
+      done
+
+      # Re-trigger the uevents that may have failed, 
+      # in hope they will succeed now
+      sed -e 's/#.*$//' /usr/etc/sysconfig/udev_retry | grep -v '^$' | \
+      while read line ; do
+         for subsystem in $line ; do
+            /usr/bin/udevadm trigger --subsystem-match=$subsystem --action=add
+         done
+      done
+
+     /usr/bin/udevadm settle
+     
+
+# End udev_retry

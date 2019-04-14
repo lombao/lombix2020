@@ -1,0 +1,5 @@
+sed 's@<openssl@<openssl-1.0/openssl@' -i openssl.c fio.c makeconfig     
+
+
+
+make -j1 SYSCONFDIR=$PREFIX/etc  SENDMAIL=/usr/sbin/sendmail

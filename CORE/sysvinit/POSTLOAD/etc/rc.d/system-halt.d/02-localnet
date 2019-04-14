@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+########################################################################
+# Begin localnet
+#
+# Description : Loopback device
+#
+# Authors     : Cesar Lombao  - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+
+      ip link set lo down
+
+# End localnet

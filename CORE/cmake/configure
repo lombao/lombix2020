@@ -1,0 +1,11 @@
+sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake || exit 1
+
+./bootstrap --prefix=$PREFIX    	\
+	    --system-libs		\
+	    --mandir=/share/man		\
+	    --no-system-jsoncpp		\
+	    --no-system-librhash	\
+            --verbose			\
+	    --parallel=2		\
+	    --docdir=/share/doc		
+             

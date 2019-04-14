@@ -1,0 +1,32 @@
+#!/usr/bin/bash
+########################################################################
+# Begin udev
+#
+# Description : Udev cold-plugging script
+#
+# Authors     : Ceasr Lombao 	-	cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+
+      # If proc is not available, there is nothing to do. We stop
+      if ! grep -q '[[:space:]]sysfs' /proc/mounts; then
+        /usr/sbin/system-halt
+      fi
+
+      # Start the udev daemon to continually watch for, and act on,
+      # uevents
+      udevd --daemon
+
+      # Now traverse /sys in order to "coldplug" devices that have
+      # already been discovered
+      udevadm trigger --action=add    --type=subsystems
+      udevadm trigger --action=add    --type=devices
+      udevadm trigger --action=change --type=devices
+
+      udevadm settle
+
+
+# End udev

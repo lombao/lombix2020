@@ -1,0 +1,8 @@
+
+
+sed -i '/_PyVerify_fd/,+1d' python/types.c
+./configure --prefix=$PREFIX 						\
+            --disable-static 						\
+	    --with-python=/usr/bin/python3				\
+	    --with-threads						\
+            --with-history   

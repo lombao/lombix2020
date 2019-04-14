@@ -1,0 +1,31 @@
+#!/usr/bin/bash
+########################################################################
+# Begin setclock
+#
+# Description : Setting Linux Clock
+#
+# Authors     : Cesar Lombao - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+source /usr/etc/rc.d/system-config
+
+	[ -r $CLOCK_CFG_FILE ] && source $CLOCK_CFG_FILE
+
+
+	case "${UTC}" in
+   	yes|true|1)
+      		CLOCKPARAMS="${CLOCKPARAMS} --utc"
+      	;;
+
+   	no|false|0)
+     		 CLOCKPARAMS="${CLOCKPARAMS} --localtime"
+      	;;
+
+	esac
+
+      	hwclock --hctosys ${CLOCKPARAMS} >/dev/null
+
+# End of clock

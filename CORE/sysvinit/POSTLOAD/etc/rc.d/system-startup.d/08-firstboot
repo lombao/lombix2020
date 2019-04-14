@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+########################################################################
+# Begin firstboot
+#
+# Description : First Boot
+#
+# Authors     : Cesar Lombao  - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+	if [ -r /firstboot ]; then
+		/usr/bin/lmbx-firstboot
+		rm -f /firstboot
+	fi
+
+# End firstboot

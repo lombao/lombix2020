@@ -1,0 +1,26 @@
+
+wget http://llvm.org/releases/6.0.1/cfe-6.0.1.src.tar.xz  		|| exit 1
+wget http://llvm.org/releases/6.0.1/compiler-rt-6.0.1.src.tar.xz	|| exit 1
+
+
+tar -xf cfe-6.0.1.src.tar.xz -C tools 			|| exit 1
+tar -xf compiler-rt-6.0.1.src.tar.xz -C projects	|| exit 1
+
+mv tools/cfe-6.0.1.src 			tools/clang		|| exit 1
+mv projects/compiler-rt-6.0.1.src	projects/compiler-rt	|| exit 1
+
+mkdir build
+cd    build
+
+CC=gcc	\
+CXX=g++	\
+cmake	-DCMAKE_INSTALL_PREFIX=$PREFIX	\
+	-DLLVM_ENABLE_FFI=ON		\
+	-DCMAKE_BUILD_TYPE=Release	\
+	-DLLVM_BUILD_LLVM_DYLIB=ON	\
+	-DLLVM_LINK_LLVM_DYLIB=ON	\
+	-DLLVM_TARGETS_TO_BUILD="host;AMDGPU;ARM" \
+	-Wno-dev -G Ninja		\
+	..
+
+

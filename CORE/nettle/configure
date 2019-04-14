@@ -1,0 +1,4 @@
+./configure --prefix=$PREFIX         					\
+	    --with-include-path=$(pkg-config --variable=includedir gmp)	\
+	    --with-lib-path=$(pkg-config --variable=libdir gmp)		\
+            --disable-static 		

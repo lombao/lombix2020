@@ -1,0 +1,18 @@
+
+./configure 					\
+	-prefix $PREFIX				\
+	-sysconfdir /usr/etc/xdg		\
+	-confirm-license			\
+	-opensource				\
+	-dbus-linked				\
+	-openssl-linked				\
+	-system-harfbuzz			\
+	-system-sqlite				\
+	-nomake examples			\
+	-no-rpath				\
+        -alsa					\
+	-libproxy				\
+	-xcb					\
+	-mtdev					\
+	-syslog					\
+	-skip qtwebengine

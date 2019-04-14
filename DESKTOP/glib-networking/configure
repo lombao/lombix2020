@@ -1,0 +1,8 @@
+
+mkdir build
+cd build
+
+meson --prefix=$PREFIX				\
+	-Dlibproxy_support=false		\
+	-Dca_certificates_path=$LMBX_CA_CERT	\
+	..

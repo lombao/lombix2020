@@ -1,0 +1,4 @@
+
+./configure --prefix=$PREFIX 		\
+	    --enable-lib-only		\
+	    --disable-static		

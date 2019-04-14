@@ -1,0 +1,2 @@
+
+LDFLAGS="-lcrypt" make -C src

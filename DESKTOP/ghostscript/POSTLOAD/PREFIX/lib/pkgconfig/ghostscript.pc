@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: ghostscript
+Description: ghostscript
+Version: 9.26
+
+Requires:
+Libs: -L${libdir} 
+Cflags: -I${includedir}

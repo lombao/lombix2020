@@ -1,0 +1,6 @@
+
+./autogen.sh --prefix=$PREFIX 		\
+	--enable-kms-only 		\
+	--mandir=$PREFIX/share/man	\
+	--enable-uxa 			\
+	--disable-static

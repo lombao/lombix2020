@@ -1,0 +1,2 @@
+cd libraries/liblmdb || exit 1
+make		|| exit 1

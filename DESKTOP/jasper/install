@@ -1,0 +1,4 @@
+cd BUILD
+make install
+
+echo "prefix=$PREFIX" >> $PREFIX/lib/pkgconfig/jasper.pc

@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: lame
+Description: lame
+Version: 3.100
+
+Requires:
+Libs: -L${libdir} 
+Cflags: -I${includedir}

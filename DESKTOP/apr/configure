@@ -1,0 +1,3 @@
+./configure --prefix=$PREFIX    				\
+	    --with-installbuilddir=$PREFIX/share/apr-1/build	\
+            --disable-static 		

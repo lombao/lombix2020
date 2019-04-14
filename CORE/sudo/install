@@ -1,0 +1,4 @@
+make install
+
+ln -sfv libsudo_util.so.0.0.0 $PREFIX/lib/sudo/libsudo_util.so.0
+

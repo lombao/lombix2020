@@ -1,0 +1,5 @@
+./configure --prefix=$PREFIX \
+	--enable-pinentry-gnome3	\
+	--enable-pinentry-tty		\
+	--enable-inside-emacs=no	
+

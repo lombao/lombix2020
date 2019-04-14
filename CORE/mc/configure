@@ -1,0 +1,7 @@
+
+./configure --prefix=$PREFIX 								\
+		--with-screen=ncurses							\
+		--with-pcre=$(pkg-config --variable=prefix libpcre)			\
+		--with-libpth-prefix=$(pkg-config --variable=prefix pth)		\
+		--enable-charset				
+		

@@ -1,0 +1,9 @@
+export GOROOT_BOOTSTRAP=/usr
+export GOROOT_FINAL=$PREFIX
+export GOROOT=$PREFIX
+export GOOS=linux
+cd src
+./make.bash
+cd ..
+mkdir -pv $PREFIX
+cp -Rp * $PREFIX/

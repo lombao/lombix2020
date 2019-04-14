@@ -1,0 +1,4 @@
+./configure --prefix=$PREFIX 		\
+            --sysconfdir=$PREFIX/etc 	\
+	    --disable-nls		\
+	    --program-prefix="eu-"	

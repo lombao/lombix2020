@@ -1,0 +1,11 @@
+cd libproxy-0.4.15
+
+mkdir -v build &&
+cd       build &&
+
+
+cmake 					\
+	-DCMAKE_BUILD_TYPE=Release 	\
+	-DPYTHON3_EXECUTABLE=$(pkg-config --variable=prefix python3)/bin/python3	\
+	-DCMAKE_INSTALL_PREFIX=$PREFIX 							\
+	.. 

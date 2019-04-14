@@ -1,0 +1,20 @@
+sed -i -e 's:\[\.-\]::' tests/filter.sed
+
+
+
+mkdir build
+cd build
+
+../configure --prefix=$PREFIX        	\
+             --bindir=$PREFIX/bin     	\
+             --sbindir=$PREFIX/sbin     \
+             --libdir=$PREFIX/lib      	\
+             --sysconfdir=$PREFIX/etc  	\
+	     --disable-nls		\
+             --with-root-prefix=""   	\
+             --enable-elf-shlibs     	\
+             --disable-libblkid     	\
+             --disable-libuuid       	\
+             --disable-uuidd        	\
+	     --disable-fsck
+

@@ -1,0 +1,10 @@
+./configure --prefix=$PREFIX \
+	    --enable-alsa		\
+	    --enable-vorbis		\
+	    --enable-flac		\
+	    --enable-mpg123		\
+ 	    --enable-sndfile		\
+	    --enable-neon		\
+	    --enable-aac		\
+	    --disable-wavpack
+

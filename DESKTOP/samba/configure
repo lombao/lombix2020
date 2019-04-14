@@ -1,0 +1,14 @@
+./configure				\
+	--prefix=$PREFIX		\
+	--sysconfdir=$PREFIX/etc	\
+	--localstatedir=/var		\
+	--with-piddir=/run/samba	\
+	--without-acl-support		\
+	--without-ldap			\
+	--without-ad-dc			\
+	--without-ads			\
+	--without-pam			\
+	--enable-fhs			\
+	--without-systemd		\
+	--enable-selftest	|| exit 1
+

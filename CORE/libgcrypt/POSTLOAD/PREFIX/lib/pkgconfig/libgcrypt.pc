@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: libgcrypt
+Description: libgcrypt
+Version: 1.8.4
+
+Requires:
+Libs: -L${libdir} -lgcrypt
+Cflags: -I${includedir}

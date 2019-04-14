@@ -1,0 +1,7 @@
+
+./configure --prefix=$PREFIX 		\
+	--mandir=$PREFIX/share/man	\
+	--enable-alsa-midi		
+
+
+

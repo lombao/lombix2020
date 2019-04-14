@@ -1,0 +1,9 @@
+./configure --prefix=$PREFIX 					\
+	    --disable-docs					\
+	    --with-x						\
+	    --with-pkgconfigdir=$PREFIX/lib/pkgconfig		\
+            --disable-static 					\
+            --mandir=$PREFIX/share/man				\
+            --enable-hdri  					\
+            --with-modules 					\
+            --with-perl   

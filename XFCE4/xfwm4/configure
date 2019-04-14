@@ -1,0 +1,5 @@
+
+
+./configure --prefix=$PREFIX 						\
+	    --enable-gtk3						\
+	    --disable-nls		

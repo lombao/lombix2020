@@ -1,0 +1,5 @@
+
+./configure --prefix=$PREFIX 			\
+            --datadir=/usr/share/hwdata || exit 1
+
+

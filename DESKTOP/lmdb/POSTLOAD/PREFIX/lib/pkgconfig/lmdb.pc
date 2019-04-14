@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: lmdb
+Description: lmdb
+Version: 0.9.23
+
+Requires:
+Libs: -L${libdir} 
+Cflags: -I${includedir}

@@ -1,0 +1,7 @@
+
+
+./bootstrap.sh --prefix=$PREFIX 					\
+		--with-icu=$(pkg-config --variable=prefix icu-i18n)	\
+		--with-python-root=/usr/os/python3			\
+		--with-python-version=3.7
+	   	

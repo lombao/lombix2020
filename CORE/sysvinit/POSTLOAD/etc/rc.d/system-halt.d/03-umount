@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+########################################################################
+# Begin umountfs
+#
+# Description : File System Un-Mount Script
+#
+# Authors     : Cesar Lombao - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna 
+#
+########################################################################
+
+
+
+      umount -a -d -r -t notmpfs,nosysfs,nodevtmpfs,noproc,nodevpts >/dev/null
+      mount -o remount,ro /
+
+
+# End umountfs

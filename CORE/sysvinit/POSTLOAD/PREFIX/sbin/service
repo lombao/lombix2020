@@ -1,0 +1,82 @@
+#!/usr/bin/bash
+########################################################################
+# Begin Service Control Command
+#
+# Description : This is the command to start/stop services
+#
+# Authors     : Cesar Lombao  - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+
+#
+# service [start|stop|restart] <servicename>
+#
+
+
+source /usr/etc/rc.d/system-config
+
+SERVICE="$2"
+COMMAND="$1"
+
+if [ -z $SERVICE ]; then
+	echo "There is no service defined. Abort"
+	exit 1
+fi
+
+if [ -z $COMMAND ]; then
+	echo "There is no command defined. Abort"
+	exit 1
+fi
+
+if [ -r "${SYSTEM_RUN_FOLDER}/${SERVICE}.rc" ]; then
+	source "${SYSTEM_RUN_FOLDER}/${SERVICE}.rc"
+else
+	echo "Service: $SERVICE does not exist"
+	echo "Check $SYSTEM_RUN_FOLDER for the $SERVICE.rc file"
+	exit 1
+fi
+
+[ -r $DAEMON_SYSCONFIG_FILE ] && source $DAEMON_SYSCONFIG_FILE
+if [ "$ENABLED" != "yes" ]; then
+	echo "$SERVICE disabled.. exit"
+	exit 0
+fi
+
+case "$COMMAND" in
+    start)
+        echo "Starting $SERVICE Service..."
+        mkdir -p $(dirname "$DAEMON_SOCKET_FILE")
+        if [ ! -z "$DAEMON_PID_FILE" -a -r "$DAEMON_PID_FILE" ]; then
+        	echo "ERROR: PID file: $DAEMON_PID_FILE still exists. Please check"
+        	exit 1
+        else
+        	$DAEMON_EXEC
+        fi
+        ;;
+
+    stop)
+        echo "Stopping $SERVICE Service..."
+        if [ ! -z "$DAEMON_PID_FILE" -a -r "$DAEMON_PID_FILE" ]; then
+        	kill $(cat $DAEMON_PID_FILE)
+        else
+        	killall $(basename $DAEMON_EXEC)
+        fi
+        rm -f $DAEMON_PID_FILE
+        ;;
+
+    restart)
+        $0 stop
+        sleep 1
+        $0 start
+        ;;
+
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+        ;;
+esac
+
+# End 

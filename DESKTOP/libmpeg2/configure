@@ -1,0 +1,5 @@
+sed -i 's/static const/static/' libmpeg2/idct_mmx.c || exit 1
+
+./configure --prefix=$PREFIX		   	\
+            --enable-shared  			\
+            --disable-static 

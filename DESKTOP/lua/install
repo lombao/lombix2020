@@ -1,0 +1,9 @@
+make INSTALL_TOP=$PREFIX \
+     INSTALL_DATA="cp -d" \
+     INSTALL_LMOD=$PREFIX/share/lua/5.3	\
+     INSTALL_MAN=$PREFIX/share/man/man1 \
+     TO_LIB="liblua.so liblua.so.5.3 liblua.so.5.3.4" \
+     install
+
+
+

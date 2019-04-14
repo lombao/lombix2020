@@ -1,0 +1,9 @@
+./configure 								\
+	--prefix=$PREFIX						\
+	--with-png=$(pkg-config --variable=prefix libpng)		\
+	--with-jpeg=$(pkg-config --variable=prefix libjpeg)		\
+	--with-webp=$(pkg-config --variable=prefix libwebp)		\
+	--with-tiff=$(pkg-config --variable=prefix libtiff-4)		\
+	--with-freetype=$(pkg-config --variable=prefix freetype2)	\
+	--with-fontconfig=$(pkg-config --variable=prefix fontconfig)	\
+	--disable-static

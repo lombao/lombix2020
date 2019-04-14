@@ -1,0 +1,34 @@
+#!/usr/bin/bash
+########################################################################
+# Begin start up
+#
+# Description : First start up script
+#             : this script will dispatch/execute the startup scripts 
+#             : the foder system-startup by name order
+#
+# Authors     : Cesar Lombao  - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+source /usr/etc/rc.d/system-config
+
+	echo "Bringing down all the services..."
+	/usr/etc/rc.d/services-down
+	
+	echo "Bringing down the system..."
+	# We bring down the system
+	for i in $( ls -v $SYSTEM_SHUTDOWN_FOLDER 2> /dev/null)
+	do
+          "$SYSTEM_SHUTDOWN_FOLDER"/"${i}" 
+	done
+
+	# And reboot
+	echo "Rebooting.."
+	sleep 3
+	reboot -d -f -i
+	
+
+
+# End start up

@@ -1,0 +1,9 @@
+mkdir build
+cd build
+
+cmake -DCMAKE_BUILD_TYPE=Release		\
+	-DCMAKE_INSTALL_PREFIX=$PREFIX		\
+	-DTESTDATADIR=$PWD/testfiles		\
+	-DENABLE_XPDF_HEADERS=ON		\
+ 	-DENABLE_UNSTABLE_API_ABI_HEADERS=ON	\
+	..

@@ -1,0 +1,8 @@
+cd build
+make install
+ln -svf gcc $PREFIX/bin/cc
+
+install -v -dm755 $PREFIX/lib/bfd-plugins
+ln -sfv ../../lib/gcc/$(gcc -dumpmachine)/8.2.0/liblto_plugin.so $PREFIX/lib/bfd-plugins
+
+

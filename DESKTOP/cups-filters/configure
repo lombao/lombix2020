@@ -1,0 +1,7 @@
+./configure --prefix=$PREFIX			\
+            --libdir=$PREFIX/lib        	\
+            --localstatedir=/var		\
+            --mandir=$PREFIX/share/man		\
+            --docdir=$PREFIX/share/doc		\
+            --sysconfdir=$PREFIX/etc		\
+            --disable-static	           	

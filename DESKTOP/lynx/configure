@@ -1,0 +1,9 @@
+
+./configure --prefix=$PREFIX			\
+	--sysconfdir=$PREFIX/etc/lynx		\
+	--datadir=$PREFIX/share/doc/lynx	\
+	--with-zlib				\
+	--with-bzlib				\
+	--with-ssl				\
+	--with-screen=ncursesw			\
+	--enable-locale-charset	

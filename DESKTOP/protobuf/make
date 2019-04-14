@@ -1,0 +1,2 @@
+cd protobuf-3.6.1
+make

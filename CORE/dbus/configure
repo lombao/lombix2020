@@ -1,0 +1,10 @@
+
+./configure --prefix=$PREFIX 			\
+            --localstatedir=/var     		\
+            --disable-doxygen-docs   		\
+            --disable-xml-docs      		\
+            --disable-static         		\
+            --disable-systemd        		\
+            --without-systemdsystemunitdir 	\
+            --with-console-auth-dir=/run/console 
+

@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+########################################################################
+# Begin sysctl
+#
+# Description : File uses /etc/sysctl.conf to set kernel runtime
+#               parameters
+#
+# Authors     : Cesar Lombao - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+source /usr/etc/rc.d/system-config
+
+
+      if [ -f $SYSCTL_CFG_FILE ]; then
+         sysctl -q -p $SYSCTL_CFG_FILE
+      fi
+
+# End sysctl

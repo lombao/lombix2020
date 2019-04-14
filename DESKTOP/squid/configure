@@ -1,0 +1,8 @@
+./configure --prefix=$PREFIX                 	\
+            --sbindir=$PREFIX/bin		\
+            --localstatedir=/var		\
+	    --with-openssl=$(pkg-config --variable=prefix openssl)	\
+ 	    --with-logdir=/var/log/squid	\
+            --with-pidfile=/run/squid.pid	\
+            --with-swapdir=/var/cache/squid	\
+	    --disable-nls                      

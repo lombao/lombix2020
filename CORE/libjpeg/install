@@ -1,0 +1,5 @@
+cd build
+rm -f $PREFIX/lib/libjpeg.so*
+make install
+
+

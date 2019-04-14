@@ -1,0 +1,7 @@
+mkdir -pv $PREFIX/share/man/man8
+mkdir -pv $PREFIX/bin
+
+cd lsof_4.91_src
+install -v -m0755 -o root -g root lsof $PREFIX/bin
+install -v lsof.8 $PREFIX/share/man/man8
+

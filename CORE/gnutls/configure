@@ -1,0 +1,5 @@
+./configure   --prefix=$PREFIX  				\
+	      --disable-guile					\
+              --with-default-trust-store-file=$LMBX_CA_CERT	\
+	      --with-libpth-prefix=$(pkg-config --variable=prefix pth)
+ 

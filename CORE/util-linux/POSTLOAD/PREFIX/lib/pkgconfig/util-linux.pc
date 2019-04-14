@@ -1,0 +1,13 @@
+prefix=%PREFIX%
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+sharedlibdir=${libdir}
+includedir=${prefix}/include
+
+Name: util-linux
+Description: util-linux
+Version: 2.32.1
+
+Requires:
+Libs: -L${libdir} 
+Cflags: -I${includedir}

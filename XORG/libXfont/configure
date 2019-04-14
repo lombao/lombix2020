@@ -1,0 +1,3 @@
+./configure --prefix=$PREFIX 		\
+            --with-bzip2     		\
+            --disable-devel-docs

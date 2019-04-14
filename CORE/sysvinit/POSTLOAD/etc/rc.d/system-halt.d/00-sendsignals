@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+########################################################################
+# Begin sendsignals
+#
+# Description : Sendsignals Script
+#
+# Authors     : Cesar Lombao - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+
+
+      killall5 -15
+      sleep 5
+
+      killall5 -9
+      sleep 2
+
+
+# End sendsignals

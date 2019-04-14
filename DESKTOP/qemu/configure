@@ -1,0 +1,20 @@
+unset CPP
+
+PYTHON3=/usr/bin/python3
+
+#sed -i 's/ memfd_create/ qemu_memfd_create/' util/memfd.c || exit 1
+
+mkdir -vp build
+cd build
+
+
+../configure --prefix=$PREFIX 			\
+             --python=$PYTHON3 			\
+             --sysconfdir=$PREFIX/etc 		\
+             --localstatedir=/var  	  	\
+             --target-list=x86_64-softmmu,arm-softmmu 	\
+             --audio-drv-list=alsa        	\
+             --with-sdlabi=2.0            	\
+             --mandir=$PREFIX/share/man    
+      
+

@@ -1,0 +1,20 @@
+sed '/dir.*CFG_PREFIX/s@^@#@' -i support/apxs.in
+
+export PYTHON=/usr/bin/python3
+
+./configure --prefix=$PREFIX       				\
+	    --enable-modules=all				\
+	    --enable-authnz-fcgi				\
+	    --enable-authn-dbm					\
+	    --enable-lua					\
+	    --enable-ssl					\
+	    --enable-mods-shared="all cgi"			\
+	    --enable-mpms-shared=all				\
+	    --enable-suexec=shared				\
+	    --with-suexec-caller=apache				\
+	    --with-suexec-docroot=/var/www			\
+	    --with-suexec-logfile=/var/log/apache/suexec.log	\
+	    --with-suexec-uidmin=100				\
+	    --with-suexec-userdir=public_html
+
+

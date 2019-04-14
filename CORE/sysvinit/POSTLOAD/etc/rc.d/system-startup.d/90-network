@@ -1,0 +1,44 @@
+#!/usr/bin/bash
+########################################################################
+# Begin network
+#
+# Description : Network Basic DHCP Control Script
+#
+# Authors     : Cesar Lombao - cesar.lombao@gmail.com
+#
+# Version     : Lombix 2020 - Bologna
+#
+########################################################################
+
+source /usr/etc/rc.d/system-config
+DHCP_DAEMON=/usr/sbin/dhcpcd
+
+	iface=""
+	if [ -r $IFACE_CFG_FILE ]; then
+		iface=$(cat $IFACE_CFG_FILE)
+		udevadm info -q path -p /sys/class/net/$iface
+		if [ "$?" -ne 0 ]; then
+			echo "Warning: $iface as configure in $IFACE_CFG_FILE has been discarded"
+			iface=""
+		fi
+	fi
+	
+	if  [ "$iface" == "0" ]; then
+		for i in $(ls -v /sys/class/net); do
+			c=$( udevadm info -q property -p /sys/class/net/$i | grep -c ID_NET_NAME_PATH )
+			if [ "$c" -ne "0" ]; then
+				iface=$i
+			fi 	
+		done
+	fi
+	
+	if  [ "$iface" != "0" ]; then	
+		# now we have an iface
+		pidfile="/run/dhcpcd-$1.pid"
+		echo "Runnin DHCP on $iface...."
+		$DHCP_DAEMON $iface &>/dev/null
+		ip link set $iface up
+	fi
+	
+
+# End network

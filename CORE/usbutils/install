@@ -1,0 +1,4 @@
+make install
+mkdir -pv /usr/share/hwdata
+wget http://www.linux-usb.org/usb.ids -O /usr/share/hwdata/usb.ids || exit 1
+
